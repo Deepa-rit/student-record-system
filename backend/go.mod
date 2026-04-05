@@ -1,7 +1,11 @@
 module student-backend
 
+<<<<<<< HEAD
 go 1.22
 
+=======
+go 1.26
+>>>>>>> 52a03d4c5d8c82a0af1939e32585c1567f5e987b
 require (
 	github.com/bytedance/gopkg v0.1.3 // indirect
 	github.com/bytedance/sonic v1.15.0 // indirect
