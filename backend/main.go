@@ -1,6 +1,8 @@
 package main
 
 import (
+	"os"
+
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 )
@@ -17,5 +19,11 @@ func main() {
 	r.PUT("/students/:id", UpdateStudent)
 	r.DELETE("/students/:id", DeleteStudent)
 
-	r.Run(":8081")
+	port := os.Getenv("PORT")
+
+	if port == "" {
+		port = "8081" // local fallback
+	}
+
+	r.Run(":" + port)
 }
